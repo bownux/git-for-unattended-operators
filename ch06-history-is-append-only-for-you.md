@@ -312,10 +312,15 @@ different hash. Misreading one: treating the pick as a move — the
 original still stands, and a fleet that picks a fix to a release branch
 while believing it relocated has two copies whose divergence nobody
 owns. Misreading two: panic at the duplicate — the same change under
-two hashes looks like history confusion until the mechanics are held,
-and merge machinery generally resolves the duplication quietly (the
-patch-identity checks exist for exactly this), though the graph reads
-strangely to chapter 3's queries in the interim. The register's rules
+two hashes looks like history confusion until the mechanics are held.
+In practice the eventual merge usually resolves quietly, because both
+sides carry *identical content* and content-level merging has nothing
+to fight over; and where duplicates must be reasoned about before
+that, the patch-identity instruments exist for the purpose — rebase
+skips already-applied duplicates by patch-id, and `log --cherry-mark`
+annotates a range's commits as equivalent-or-not across branches —
+though the graph reads strangely to chapter 3's queries in the
+interim. The register's rules
 make the instrument boring, which is the goal. Cherry-pick *records
 its lineage*: `-x` appends the `(cherry picked from commit …)` line,
 turning the copy into a citation — provenance across branches, the

@@ -192,7 +192,9 @@ one byte moved:  2f8674c39111a6ad74a71adccc38829139d444ba
 
 Identical content, identical name — a different file, a different directory, a
 different machine, a different decade, and `retries = 5` under a trailing
-newline is `53d37c74…` everywhere on earth, because the name *is* the content,
+newline is `53d37c74…` in every SHA-1 repository on earth (still the default
+object format; repositories born under the newer SHA-256 format digest the
+same universality with longer names), because the name *is* the content,
 digested. One byte moved, and the name is unrecognizable. The reader who
 worked through the previous volume has seen this instrument before: it is the
 artifact index's content hash, promoted from a column the operator maintains
