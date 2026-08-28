@@ -1,0 +1,66 @@
+{
+  "gate": "pass1",
+  "version": "1.0",
+  "date": "2026-08-28",
+  "book_dir": "/home/luis/ai/books-by-ai/books/git-for-unattended-operators",
+  "verdict": "PASS",
+  "reject_count": 0,
+  "warn_count": 0,
+  "findings": [],
+  "measured": {
+    "body_words_measured": 25302,
+    "print_equivalent_pages": 84,
+    "chapter_words": {
+      "ch01-the-other-ledger.md": 3090,
+      "ch02-the-commit-as-a-unit-of-meaning.md": 3044,
+      "ch03-reading-history-as-evidence.md": 3159,
+      "ch04-diagnosis-by-bisection.md": 3163,
+      "ch05-parallel-operators.md": 3233,
+      "ch06-history-is-append-only-for-you.md": 3261,
+      "ch07-gates-at-the-threshold.md": 3166,
+      "ch08-the-handoff-is-a-pull-request.md": 3186
+    },
+    "padding_metrics": {
+      "chapters": {
+        "ch01-the-other-ledger.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch02-the-commit-as-a-unit-of-meaning.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch03-reading-history-as-evidence.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch04-diagnosis-by-bisection.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch05-parallel-operators.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch06-history-is-append-only-for-you.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch07-gates-at-the-threshold.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch08-the-handoff-is-a-pull-request.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        }
+      },
+      "compression_ratio": 0.3604,
+      "near_duplicate_paragraph_share": 0.0,
+      "top_ngram": {
+        "ngram": "*draft status: author draft; human verification",
+        "share": 0.0003
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "manifest_version": "1.0",
+  "book": {
+    "title": "The Repository Is the Ledger",
+    "subtitle": "Git for unattended operators",
+    "tier": "pocket",
+    "language": "en",
+    "audience": "Developers supervising agents that commit to shared repositories \u2014 and the session-bound operators themselves; assumes working git vocabulary and the non-interactive register's basics, no internals knowledge.",
+    "edition": 1,
+    "series": "O'AILLY Systems & Craft",
+    "isbn": null
+  },
+  "structure": {
+    "word_count_body": 25302,
+    "print_equivalent_pages": 84,
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Other Ledger",
+        "words": 3090,
+        "source_file": "ch01-the-other-ledger.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "The Commit as a Unit of Meaning",
+        "words": 3044,
+        "source_file": "ch02-the-commit-as-a-unit-of-meaning.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Reading History as Evidence",
+        "words": 3159,
+        "source_file": "ch03-reading-history-as-evidence.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Diagnosis by Bisection",
+        "words": 3163,
+        "source_file": "ch04-diagnosis-by-bisection.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Parallel Operators",
+        "words": 3233,
+        "source_file": "ch05-parallel-operators.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "History Is Append-Only (For You)",
+        "words": 3261,
+        "source_file": "ch06-history-is-append-only-for-you.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Gates at the Threshold",
+        "words": 3166,
+        "source_file": "ch07-gates-at-the-threshold.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "The Handoff Is a Pull Request",
+        "words": 3186,
+        "source_file": "ch08-the-handoff-is-a-pull-request.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "RogerAI Labs"
+          }
+        ]
+      }
+    ],
+    "has_glossary_or_index": true,
+    "code_listing_policy": "executable_plus_marked_fragments"
+  },
+  "provenance": {
+    "written_by": [
+      {
+        "model": "claude-fable-5",
+        "version": "claude-fable-5",
+        "operator": "RogerAI Labs"
+      }
+    ],
+    "grounded_in": [
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/gitglossary",
+        "note": "git's own vocabulary, incl. porcelain/plumbing"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/book/en/v2",
+        "note": "Pro Git \u2014 objects/internals ground chapter 1"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/git-log",
+        "note": "the query language of chapter 3"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/git-bisect",
+        "note": "run/skip/terms/replay \u2014 chapter 4"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/git-worktree",
+        "note": "the fleet's seats \u2014 chapter 5"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/git-push",
+        "note": "non-FF refusals, force-with-lease \u2014 chapter 6"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/git-reflog",
+        "note": "the recorder and its horizons \u2014 chapter 6"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/githooks",
+        "note": "every threshold \u2014 chapter 7"
+      },
+      {
+        "kind": "url",
+        "reference": "https://git-scm.com/docs/git-request-pull",
+        "note": "the proposal's original instrument \u2014 chapter 8"
+      },
+      {
+        "kind": "url",
+        "reference": "https://www.kernel.org/doc/html/latest/process/submitting-patches.html",
+        "note": "message-craft lineage"
+      },
+      {
+        "kind": "dataset",
+        "reference": "authoring-machine transcripts 2026-08-28 (Gentoo, git listings in scratch repositories), reproduced in the text as real outputs",
+        "note": "every listing executed under PATH=/usr/bin:/bin, non-root, during writing"
+      }
+    ],
+    "verified_by": {
+      "name": "Roger AI",
+      "role": "founder / verifier",
+      "contact": null
+    },
+    "tools": [
+      "git + bash (listing execution during authoring, scratch repositories)",
+      "O'AILLY pass1 gate (local runs during authoring; word measurement via the gate's counter)",
+      "curl (reference resolution checks during authoring)"
+    ],
+    "disclosure_statement": "Written end-to-end by Claude Fable 5 (claude-fable-5), operated by RogerAI Labs, in a single autonomous authoring session on 2026-08-28; no hidden human writing. All listings were actually executed by the author on the authoring machine during writing, and all printed outputs are real transcripts of those executions. Draft status: human verification pending, as stated on the provenance page."
+  },
+  "publisher": {
+    "account": "rogerai-labs",
+    "steward": {
+      "name": "Roger AI",
+      "entity": "RogerAI Labs"
+    }
+  },
+  "review": {
+    "status": "draft",
+    "trail_uri": null,
+    "passes": []
+  },
+  "signing": {
+    "author_signature": null,
+    "platform_signature": null,
+    "c2pa_manifest_hash": null
+  },
+  "cover": {
+    "mascot_request": {
+      "creature": "weaver ant",
+      "why": "Workers that collaborate by linking their own bodies into chains so others can cross, then binding leaves into shared structures the colony lives in \u2014 version-joining as physical craft. The trilogy's third worker insect: the termite built blind, the leafcutter provisioned memory, the weaver binds parallel work into one construction. Worker-insect taxon per the SYSTEMS & CRAFT shelf reservation; kin of the reserved ant genus, so knowingly subject to founder sign-off \u2014 failing it, any insect that builds by joining its fellows' work fits."
+    },
+    "assigned": null
+  }
+}
