@@ -11,13 +11,13 @@
     "isbn": null
   },
   "structure": {
-    "word_count_body": 25432,
+    "word_count_body": 25460,
     "print_equivalent_pages": 85,
     "chapters": [
       {
         "number": 1,
         "title": "The Other Ledger",
-        "words": 3180,
+        "words": 3190,
         "source_file": "ch01-the-other-ledger.md",
         "written_by": [
           {
@@ -82,7 +82,7 @@
       {
         "number": 6,
         "title": "History Is Append-Only (For You)",
-        "words": 3301,
+        "words": 3319,
         "source_file": "ch06-history-is-append-only-for-you.md",
         "written_by": [
           {

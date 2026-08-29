@@ -366,10 +366,11 @@ folklore version. The covenant protects the shared record; the estate
 proves the covenant was kept; and an operator holding both has what
 this series has been assembling from its first chapter — an account of
 its conduct that does not depend on anyone's trust in its word. The
-same join runs the other direction with equal force: volume two's
-ledger rows have carried commit hashes since its chapter 2 taught the
-`Ledger-Op` convention, and this chapter is where those hashes acquire
-their guarantee — an estate that cites `81305e9` cites something the
+same join runs the other direction with equal force: the estate's rows
+carry commit hashes wherever this volume taught the two records to meet
+— chapter 1's boundary made the hash their foreign key, chapter 2's
+`Ledger-Op` trailer runs the join the other way — and this chapter is
+where those hashes acquire their guarantee — an estate that cites `81305e9` cites something the
 covenant promises will still mean `81305e9`, verbatim, for as long as
 the shared history stands. Cross-referenced records are only as strong
 as the weaker register; the covenant makes both strong.
