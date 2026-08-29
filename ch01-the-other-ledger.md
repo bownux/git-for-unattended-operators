@@ -128,8 +128,9 @@ git config blame.ignoreRevsFile .git-blame-ignore-revs   # attribution sans nois
 
 The forward references are deliberate — the ritual is complete here so no
 seat assembles it piecemeal from later chapters, and each line's *why*
-arrives where its subject is taught. Chapter 7's seat audit checks exactly
-this list against exactly this file.
+arrives where its subject is taught. Chapter 7's seat audit will
+compare each seat's live configuration against exactly this list, kept in
+the repository as the fleet's manifest.
 
 ## The repository you inherit
 
