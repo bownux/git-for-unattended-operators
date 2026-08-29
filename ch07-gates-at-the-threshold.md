@@ -155,7 +155,9 @@ e9283eb policy travels with the repo
 
 The hooks directory is now *in* the repository — versioned, reviewed,
 inherited by every clone — and one line of the open ritual
-(`core.hooksPath hooks`) arms it per seat. That deliberate second step is
+(`core.hooksPath hooks`, a git 2.9 key; a seat older than that ignores the
+setting *silently* and runs ungated, which is precisely the drift the seat
+audit below exists to catch) arms it per seat. That deliberate second step is
 the security default preserved: policy travels automatically, *execution*
 of policy remains each seat's explicit opt-in, made in the same ritual
 that sets identity and pager discipline (chapter 1), and documented in
@@ -204,7 +206,8 @@ the identical treatment as *fixtures in the repository*: for each gate, a
 pair of staged-state fixtures (one that must pass, one that must be
 refused, each a tiny script that constructs the state in a scratch
 worktree and runs the hook against it), executed by CI on every change
-to the hooks directory — the gates gating themselves, with the
+to the hooks directory (a path filter on the hooks dir is the trigger; the
+fixtures run in seconds) — the gates gating themselves, with the
 authoritative runner as their own second gate. Volume two's kill-testing
 instinct extends the suite where a hook does more than read: a hook
 that writes (commit-msg rewriting a message, a hook maintaining a

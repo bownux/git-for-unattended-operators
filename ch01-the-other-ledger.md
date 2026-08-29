@@ -14,8 +14,9 @@ all along, installed on effectively every machine, holding history with
 guarantees the estate had to build deliberately — append-only records,
 tamper-evident identity, provenance on every entry, inheritance across
 generations of workers who never meet. It is the version control system. A git
-repository is an append-only, content-addressed, cryptographically chained
-history store, and every operator that touches code — which is, increasingly,
+repository is an append-only, content-addressed, hash-chained history store —
+with the honest asterisk on "cryptographic" that this chapter's identity
+section will place — and every operator that touches code — which is, increasingly,
 every operator — already writes to one daily.
 
 And writes to it badly, which is this book's reason to exist. The practicing
@@ -54,9 +55,9 @@ alone; this volume is where its work stops being alone.
 Volume one opened on `isatty` — the system call at which every tool chooses
 its human face or its machine face. Git is that fork's most complete citizen,
 so complete that it donated the vocabulary this series has used for three
-books: the project's own documentation divides its commands into *porcelain*
+books: the project's own glossary divides its commands into *porcelain*
 (the polished interface for humans) and *plumbing* (the pipes underneath,
-built for programs), and its maintainers coined the terms. The operator's
+built for programs) — the terms are git's own, defined in gitglossary(7). The operator's
 first orientation is knowing which face it is talking to:
 
 ```bash
@@ -214,7 +215,10 @@ different machine, a different decade, and `retries = 5` under a trailing
 newline is `53d37c74…` in every SHA-1 repository on earth (still the default
 object format; repositories born under the newer SHA-256 format digest the
 same universality with longer names), because the name *is* the content,
-digested. One byte moved, and the name is unrecognizable. The reader who
+digested. One byte moved, and the name is unrecognizable. (The claim is
+verifiable from any shell in one line — `printf "retries = 5\n" | git
+hash-object --stdin` reproduces `53d37c74…` on any machine — because blob
+hashes, unlike commit hashes, digest content alone.) The reader who
 worked through the previous volume has seen this instrument before: it is the
 artifact index's content hash, promoted from a column the operator maintains
 to the *addressing scheme of the entire store*. Two consequences matter

@@ -48,7 +48,9 @@ operator (1):
 ```
 
 `request-pull` — the command the kernel's development flow still runs on —
-generates the proposal's irreducible core: the base the work grew from
+generates the proposal's irreducible core (in this sandboxed transcript the
+fetch location is the demo's local path; a real proposal names the branch's
+published URL there — the field, not this run's value, is the skeleton): the base the work grew from
 (hash and claim), where the work can be fetched, the endpoint being
 proposed, and (below the fold) the shortlog and diffstat — the who, what,
 and how-much. Every forge PR is this skeleton wearing a discussion

@@ -11,13 +11,13 @@
     "isbn": null
   },
   "structure": {
-    "word_count_body": 25460,
-    "print_equivalent_pages": 85,
+    "word_count_body": 25656,
+    "print_equivalent_pages": 86,
     "chapters": [
       {
         "number": 1,
         "title": "The Other Ledger",
-        "words": 3190,
+        "words": 3235,
         "source_file": "ch01-the-other-ledger.md",
         "written_by": [
           {
@@ -43,7 +43,7 @@
       {
         "number": 3,
         "title": "Reading History as Evidence",
-        "words": 3159,
+        "words": 3187,
         "source_file": "ch03-reading-history-as-evidence.md",
         "written_by": [
           {
@@ -56,7 +56,7 @@
       {
         "number": 4,
         "title": "Diagnosis by Bisection",
-        "words": 3163,
+        "words": 3183,
         "source_file": "ch04-diagnosis-by-bisection.md",
         "written_by": [
           {
@@ -82,7 +82,7 @@
       {
         "number": 6,
         "title": "History Is Append-Only (For You)",
-        "words": 3319,
+        "words": 3349,
         "source_file": "ch06-history-is-append-only-for-you.md",
         "written_by": [
           {
@@ -95,7 +95,7 @@
       {
         "number": 7,
         "title": "Gates at the Threshold",
-        "words": 3166,
+        "words": 3209,
         "source_file": "ch07-gates-at-the-threshold.md",
         "written_by": [
           {
@@ -108,7 +108,7 @@
       {
         "number": 8,
         "title": "The Handoff Is a Pull Request",
-        "words": 3186,
+        "words": 3216,
         "source_file": "ch08-the-handoff-is-a-pull-request.md",
         "written_by": [
           {

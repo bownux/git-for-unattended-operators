@@ -60,9 +60,12 @@ subject, `%b` body, `%an`/`%ae` author name and mail, `%aI` the author
 date in strict ISO-8601 — the format volume two's estate speaks natively,
 so history rows and ledger rows join on timestamps without conversion —
 and `%(trailers:key=Ledger-Op)` lifting a named trailer straight into the
-row, which turns chapter 2's provenance convention into a queryable
-column. Delimiter choice follows the usual paranoia (subjects may contain
-pipes; `%x00` emits NUL for the fully hostile case), and the same
+row, which turns chapter 2's provenance convention into a queryable column
+(the selective trailer placeholders arrived in git 2.22 — on older seats,
+chapter 2's `interpret-trailers` pipeline is the portable spelling of the
+same query). Delimiter choice follows the usual paranoia — subjects may contain pipes;
+`%x00` emits NUL for the fully hostile case, consumed as
+`--format='%h%x00%s' | awk -F'\0' …` — and the same
 `--format` vocabulary drives `show`, `branch --format`, and `for-each-ref`
 — one shape language across every reading tool. The rule it all serves is
 volume one's porcelain rule with a local sharpening: *the default log

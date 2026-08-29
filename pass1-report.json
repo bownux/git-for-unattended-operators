@@ -8,17 +8,17 @@
   "warn_count": 0,
   "findings": [],
   "measured": {
-    "body_words_measured": 25432,
-    "print_equivalent_pages": 85,
+    "body_words_measured": 25656,
+    "print_equivalent_pages": 86,
     "chapter_words": {
-      "ch01-the-other-ledger.md": 3180,
+      "ch01-the-other-ledger.md": 3235,
       "ch02-the-commit-as-a-unit-of-meaning.md": 3044,
-      "ch03-reading-history-as-evidence.md": 3159,
-      "ch04-diagnosis-by-bisection.md": 3163,
+      "ch03-reading-history-as-evidence.md": 3187,
+      "ch04-diagnosis-by-bisection.md": 3183,
       "ch05-parallel-operators.md": 3233,
-      "ch06-history-is-append-only-for-you.md": 3301,
-      "ch07-gates-at-the-threshold.md": 3166,
-      "ch08-the-handoff-is-a-pull-request.md": 3186
+      "ch06-history-is-append-only-for-you.md": 3349,
+      "ch07-gates-at-the-threshold.md": 3209,
+      "ch08-the-handoff-is-a-pull-request.md": 3216
     },
     "padding_metrics": {
       "chapters": {
@@ -55,7 +55,7 @@
           "bullet_share": 0.0
         }
       },
-      "compression_ratio": 0.3605,
+      "compression_ratio": 0.3611,
       "near_duplicate_paragraph_share": 0.0,
       "top_ngram": {
         "ngram": "*draft status: author draft; human verification",

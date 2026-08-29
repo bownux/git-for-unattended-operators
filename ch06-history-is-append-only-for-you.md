@@ -127,7 +127,8 @@ the amended-away commits, the reset-away work — persist in the store as
 *unreachable* objects until garbage collection actually removes them, and
 gc's own rules keep them well past the reflog entries that name them:
 reflog entries expire (order of ninety days for reachable history, thirty
-for the unreachable, tunable), and unreachable objects get a grace period
+for the unreachable, tunable — the gc.reflogExpire family, per
+git-reflog(1)), and unreachable objects get a grace period
 beyond that before pruning. The operational reading has two halves. For
 recovery: inside the horizon, everything this chapter promised holds, and
 even a *deleted branch* — whose own reflog dies with it — remains
@@ -392,9 +393,11 @@ guards around the pass: it runs with a clean tree and a fresh
 calibration read of `status` and the branch counts; it never crosses
 the publication boundary without the lease guard, and never crosses a
 *merge* it shares with anyone under any guard; and its result gets the
-same four-question read as any inherited entry before pushing, because
-a reshaping pass is an author reviewing its own ledger, and chapter 2's
-standards do not soften for self-review. Where rewriting is demanded on
+same four-question read as any inherited entry before pushing — with
+`git range-diff old-tip...new-tip` as the read's instrument of choice,
+since it pairs old and new commits and shows exactly what the reshaping
+changed — because a reshaping pass is an author reviewing its own ledger,
+and chapter 2's standards do not soften for self-review. Where rewriting is demanded on
 *published* history — the committed secret, the license violation, the
 legal removal — the operator recognizes the situation as the
 coordinated surgery it is: every holder must participate (the erased

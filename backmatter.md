@@ -25,6 +25,7 @@
 - **pathspec** — staging and querying by explicit path or pattern; the precision instrument that keeps two truths out of one commit.
 - **pickaxe (`-S`)** — history filtered to commits where a string's occurrence count changed; the birth-and-death query for any content.
 - **porcelain / plumbing** — git's own names for its human-facing and machine-facing layers; machine formats (`--porcelain`, `--format`) are the parseable contract.
+- **porcelain v2** — `status --porcelain=v2`, the richer versioned status format; distinct from `worktree list --porcelain`'s stanza format — each command's porcelain is its own documented contract.
 - **pull request** — a protocol, not a product: a branch, a base, and a proposal document with enough context to judge integration.
 - **reflog** — the private, expiring journal of every place each ref has pointed; the black-box recorder for private history's accidents.
 - **replayable hunt** — a bisection resumed across sessions via `bisect log` and `bisect replay`; the hunt's state as two durable artifacts.
@@ -79,26 +80,39 @@
 36. Linux kernel: Submitting Patches — the conventions commit-message craft descends from. https://www.kernel.org/doc/html/latest/process/submitting-patches.html
 37. *Linux for Language Models*, O'AILLY Systems & Craft — trilogy volume one. https://oailly.com/read/rogerai-labs--linux-for-language-models/
 38. git-mv(1) — renames as recorded moves (and their inference at read time). https://git-scm.com/docs/git-mv
+39. git-range-diff(1) — comparing two versions of a branch; the reshaping pass's review instrument. https://git-scm.com/docs/git-range-diff
+40. Git hash function transition (SHA-256 object format design). https://git-scm.com/docs/hash-function-transition
+41. SHAttered — the 2017 SHA-1 collision (Stevens et al.); the boundary on unqualified "cryptographic" claims for SHA-1 chains. https://shattered.io/
 
 ## Feature floors
 
 The git features this book leans on beyond the ancient core, with the
-versions that introduced them, in one place: `git worktree` 2.5 (2015) ·
-`--porcelain=v2` status 2.11 · `sparse-checkout` command 2.25 ·
-`git maintenance` 2.30 · `bisect --first-parent` 2.29 · `restore`/`switch`
-2.23 · SSH commit/tag signing 2.34 · `rebase --update-refs` 2.38 ·
-`log -L` with `--no-patch` 2.42. Every floor is comfortably below any
-currently maintained distribution's git; inherited machines check with one
-`git --version`, and the techniques degrade gracefully (older spellings —
-`checkout` for `restore`, manual stack rebasing for `--update-refs` — are
-noted where the text teaches the modern form).
+versions that introduced them (or the earliest version whose documentation
+this book verified them in), in one place: `git worktree` 2.5 (2015) ·
+`core.hooksPath` 2.9 · `--porcelain=v2` status 2.11 · `tag --format`
+documented by 2.17 · `branch --format` documented by 2.19 · trailer
+pretty-format selectors (`%(trailers:key=…,valueonly)`) 2.22 —
+older seats use chapter 2's `interpret-trailers` pipeline ·
+`restore`/`switch` 2.23 · `sparse-checkout` command 2.25 · `init -b`
+(initial branch name) 2.28 — older seats follow `git init` with
+`git symbolic-ref HEAD refs/heads/main` · `bisect --first-parent` and
+`git maintenance` 2.29, with `maintenance start` scheduling settled by
+2.30 · SSH commit/tag signing 2.34 · `rebase --update-refs` 2.38.
+`git log -L` implies `--patch` and its suppression via `--no-patch` is
+documented at least as far back as the 2.30-era manual (other diff formats
+with `-L` remain unimplemented); this corrects the earlier draft's
+overstated 2.42 floor. Every floor is comfortably below any currently
+maintained distribution's git; inherited machines check with one
+`git --version`, and the techniques degrade gracefully.
 
 ## A note on measured outputs
 
 Outputs printed in this book's listings are real transcripts from the
 authoring machine (Gentoo Linux, kernel 6.18.31-gentoo-dist), captured
 2026-08-28 in scratch repositories under the publisher gate's environment.
-Hashes shown are those runs' real hashes and will differ on re-execution
-(commit objects digest their dates); refusal messages, statuses, and
-behaviors are the reproducible claims. Listings using `git log -L` with
-`--no-patch` require git 2.42 or later.
+Hashes shown are those runs' real hashes; commit hashes differ on
+re-execution (commit objects digest their dates) while blob hashes, being
+content-addressed, reproduce exactly — chapter 1 shows the one-line check.
+Refusal messages, statuses, and behaviors are the reproducible claims.
+Listings assume a GNU userland (notably GNU `sed -i`), matching the gate
+environment they run in.

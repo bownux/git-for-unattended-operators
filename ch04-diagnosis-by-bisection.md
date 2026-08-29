@@ -61,13 +61,13 @@ git bisect start HEAD HEAD~19 >/dev/null 2>&1
 git bisect run ./predicate.sh >bisect.out 2>&1
 grep -E "first bad commit" bisect.out | head -1
 git log -1 --format="guilty entry: %h %s" "$(git rev-parse refs/bisect/bad)"
-echo "probes spent: $(grep -cE "^# (good|bad|skip)" .git/BISECT_LOG) across 19 candidate commits"
+echo "probes spent: $(git bisect log | grep -cE "^git bisect (good|bad|skip)") across 19 candidate commits"
 ```
 
 ```output
-069375fa58dd242d49002a6fcf30dd5e70b1efc1 is the first bad commit
-guilty entry: 069375f change 13
-probes spent: 7 across 19 candidate commits
+570ee22ed6463e3d2db6b22a12542e66965af14a is the first bad commit
+guilty entry: 570ee22 change 13
+probes spent: 5 across 19 candidate commits
 ```
 
 Change 13 — the commit that moved `limit` from 100 to 9000 — identified
@@ -99,8 +99,10 @@ engine, probing dozens of times without supervision. Four properties
 decide whether the hunt converges on truth.
 
 *Correct polarity, verified first.* Before handing the predicate to `run`,
-execute it once at the known-bad point and once at the known-good point
-and confirm it says what the frame asserts — bad fails, good passes. The
+execute it once at the known-bad point and once at the known-good point and
+confirm it says what the frame asserts — bad fails, good passes; concretely,
+`git checkout <good> && ./predicate.sh; echo $?` expecting 0, then the same
+at `<bad>` expecting nonzero, two shots that cost seconds. The
 failure mode this prevents is not subtle: a predicate inverted, or subtly
 testing the wrong thing, does not err randomly — it conducts a flawless
 binary search to a *confidently wrong* commit, and the operator inherits a

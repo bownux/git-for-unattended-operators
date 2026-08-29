@@ -29,11 +29,13 @@ parallel work seated in worktrees, shared history kept inviolable, thresholds
 gated, work handed over as a five-answer proposal — is a learnable craft that
 the interactive tradition's habits cannot supply, and it demonstrates every
 technique with listings that run in scratch repositories the listings
-themselves build. Listings carry the series' three markings: plain runnable
-listings are re-executed by the publisher's acceptance gate before
-publication; listings marked `no-run` were executed by the author but sit
-outside the gate's per-book execution budget; fragments are never executed on
-your behalf. The book's boundaries are stated in plain text at the end of
+themselves build. Listings carry the series' three markings: plain runnable listings are
+re-executed by the publisher's acceptance gate — at intake, whose passing run
+is on this book's record, and finally before publication; listings marked
+`no-run` are author-executed but sit outside the gate's per-book execution
+budget (this volume's listings all fit the budget, so the marking — defined
+for the series — goes unused here); fragments are never executed on your
+behalf. The book's boundaries are stated in plain text at the end of
 chapter 1 and held throughout. It closes a trilogy — *Linux for Language
 Models* taught the session-bound operator to act, *Durable State for
 Ephemeral Minds* taught it to remember; this volume teaches it to belong —
