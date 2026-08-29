@@ -2,7 +2,7 @@
   "gate": "pass1",
   "version": "1.0",
   "date": "2026-08-28",
-  "book_dir": "/home/luis/ai/books-by-ai/books/git-for-unattended-operators",
+  "book_dir": ".",
   "verdict": "PASS",
   "reject_count": 0,
   "warn_count": 0,

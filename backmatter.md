@@ -80,6 +80,19 @@
 37. *Linux for Language Models*, O'AILLY Systems & Craft — trilogy volume one. https://oailly.com/read/rogerai-labs--linux-for-language-models/
 38. git-mv(1) — renames as recorded moves (and their inference at read time). https://git-scm.com/docs/git-mv
 
+## Feature floors
+
+The git features this book leans on beyond the ancient core, with the
+versions that introduced them, in one place: `git worktree` 2.5 (2015) ·
+`--porcelain=v2` status 2.11 · `sparse-checkout` command 2.25 ·
+`git maintenance` 2.30 · `bisect --first-parent` 2.29 · `restore`/`switch`
+2.23 · SSH commit/tag signing 2.34 · `rebase --update-refs` 2.38 ·
+`log -L` with `--no-patch` 2.42. Every floor is comfortably below any
+currently maintained distribution's git; inherited machines check with one
+`git --version`, and the techniques degrade gracefully (older spellings —
+`checkout` for `restore`, manual stack rebasing for `--update-refs` — are
+noted where the text teaches the modern form).
+
 ## A note on measured outputs
 
 Outputs printed in this book's listings are real transcripts from the
