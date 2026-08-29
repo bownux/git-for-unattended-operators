@@ -111,7 +111,25 @@ session-bound worker must never depend on whatever global config the
 machine happens to carry, and a repository it initializes gets its
 identity, its default branch, and any policy switches set explicitly, in
 the same breath, by its own ritual. One function opens the estate; one
-function initializes the repo; drift dies in both places the same way.
+function initializes the repo; drift dies in both places the same way. And
+because later chapters will lean on "the open ritual" repeatedly, here is the
+whole of it, canonical — every line explained by the chapter noted beside it:
+
+```bash fragment
+# The seat's open ritual — run once per repository claim, by every seat.
+git config user.name  "session-95 (lineage-x)"    # identity declared, never ambient
+git config user.email "ops@fleet.example"
+git config core.hooksPath hooks                    # arm the traveling policy   (ch. 7)
+git config commit.template .gitmessage             # the message scaffold       (ch. 8)
+git config rerere.enabled true                     # conflict judgments reused  (ch. 5)
+git config blame.ignoreRevsFile .git-blame-ignore-revs   # attribution sans noise (ch. 3)
+# per session, before work: GIT_PAGER=cat exported; fetch; read the drift counts (ch. 5)
+```
+
+The forward references are deliberate — the ritual is complete here so no
+seat assembles it piecemeal from later chapters, and each line's *why*
+arrives where its subject is taught. Chapter 7's seat audit checks exactly
+this list against exactly this file.
 
 ## The repository you inherit
 

@@ -8,10 +8,10 @@
   "warn_count": 0,
   "findings": [],
   "measured": {
-    "body_words_measured": 25364,
+    "body_words_measured": 25432,
     "print_equivalent_pages": 85,
     "chapter_words": {
-      "ch01-the-other-ledger.md": 3112,
+      "ch01-the-other-ledger.md": 3180,
       "ch02-the-commit-as-a-unit-of-meaning.md": 3044,
       "ch03-reading-history-as-evidence.md": 3159,
       "ch04-diagnosis-by-bisection.md": 3163,

@@ -11,13 +11,13 @@
     "isbn": null
   },
   "structure": {
-    "word_count_body": 25364,
+    "word_count_body": 25432,
     "print_equivalent_pages": 85,
     "chapters": [
       {
         "number": 1,
         "title": "The Other Ledger",
-        "words": 3112,
+        "words": 3180,
         "source_file": "ch01-the-other-ledger.md",
         "written_by": [
           {
